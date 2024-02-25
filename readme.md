@@ -9,17 +9,36 @@
 ## Questions
 ### Describe how Kotlin handles null safety. What are nullable types and non-null types in Kotlin? (0,5 points)
 
-<span style="color:blue">Provide your answer here! </span>
+<span style="color:blue">
+
+Non-null types: By default, types in Kotlin are non-null, meaning they can’t hold a null value. For example, if you declare a variable of type String, you can’t assign null to it.
+Nullable types: If you want to allow a variable to hold a null value, you can declare it as a nullable type by appending a ? to the type name.
+
+</span>
 > Note: you can also use code snippets to illustrate your answer. 
 
 ```kotlin 
 // example code snippet
 val a: String = "value" // non-null type
+a = null // This will cause a compile error
+
+var b: String? = "value" // nullable type
+b = null // This is allowed
 ```
 
 ### What are lambda expressions and higher order functions in Kotlin? Why would you store a function inside a variable? (0,5 points)
 
-<span style="color:blue">Provide your answer here!</span>
+<span style="color:blue">
+
+Lambda Expressions: In Kotlin, a lambda expression is essentially an anonymous function; that is, a function with no name. It’s defined with a curly braces {} and can be assigned to a variable or passed as an argument to a function.
+Higher-Order Functions: A higher-order function is a function that takes functions as parameters, or returns a function, or both. They are called ‘higher-order’ because they operate on another function. 
+
+Storing a function in a variable is useful for several reasons:
+- Re-usability: If a function is used multiple times, storing it in a variable avoids the need to rewrite the function each time.
+- Passing Functions: If you want to pass a function as an argument to another function, it’s often easier to do so if the function is stored in a variable.
+- Functional Programming: Storing functions in variables is a key aspect of functional programming, which can lead to more concise and readable code. It allows for the creation of complex logic using simple, reusable functions.
+
+</span>
 
 ### Provide a solution for the following number guessing game inside `App.kt`. (3 points)
 
